@@ -1,0 +1,32 @@
+[DISK]
+command=df -h / | awk '/\//{ printf(" Disk: %4s/%s (%s) \n", $3, $2, $5) }'
+interval=2
+
+[CPU]
+full_text= CPU:  0.00% @ 00.0°C 
+command=~/.config/i3blocks/cpu/cpu_info.sh
+interval=repeat
+
+[MEM]
+command=free -h | awk '/Mem:/ { printf(" Mem: %5s/%s \n", $3, $2) }'
+interval=1
+
+[SOUND_BURST]
+command=~/.config/i3blocks/sound/sound_burst.sh
+interval=once
+
+[SOUND]
+command=~/.config/i3blocks/sound/sound_info.sh
+interval=-2
+
+[DISPLAY]
+command=~/.config/i3blocks/display/display_info.sh
+interval=-2
+
+[BATTERY]
+command=~/.config/i3blocks/battery/battery_info.sh
+interval=3
+
+[TIME_DATE]
+command=date +" %a, %d %b - %H:%M:%S"
+interval=1
