@@ -1,3 +1,3 @@
 #! /usr/bin/bash
 
-brightnessctl | grep Current | awk '{printf(" Display: %s% \n", $3)}'
+brightnessctl | grep Current | awk '{printf(" Display: %s \n", $4)}'

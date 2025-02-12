@@ -27,6 +27,10 @@ interval=-2
 command=~/.config/i3blocks/battery/battery_info.sh
 interval=3
 
+[NETWORK]
+command=~/.config/i3blocks/networking/network_connection.sh
+interval=5
+
 [TIME_DATE]
 command=date +" %a, %d %b - %H:%M:%S"
 interval=1
